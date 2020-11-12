@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 /*
 Splash Screen is the First Activity of our Application
 */
-class Splash_Activity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
