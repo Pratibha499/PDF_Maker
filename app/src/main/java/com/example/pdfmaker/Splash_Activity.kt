@@ -2,13 +2,19 @@ package com.example.pdfmaker
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 
 class Splash_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_)
-        startActivity(Intent(this, MainActivity::class.java))
-        finish();
+        setContentView(R.layout.activity_splash)
+
+        // Handler used to send and process Message
+        Handler(Looper.getMainLooper()).postDelayed({
+
+        })
+
     }
 }
