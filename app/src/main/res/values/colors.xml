@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="splash_screen_white">#fff</color>
+
+    <!-- Toolbar color-->
+    <color name="toolbar_red">F3E61F1F</color>
 </resources>
