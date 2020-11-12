@@ -6,6 +6,9 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 
+/*
+Splash Screen is the First Activity of our Application
+*/
 class Splash_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,8 +16,10 @@ class Splash_Activity : AppCompatActivity() {
 
         // Handler used to send and process Message
         Handler(Looper.getMainLooper()).postDelayed({
-
-        })
-
+            /* Intent to start the Main Activity*/
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            // 1000ms = 1sec Duration time of Splash Screen
+        }, 1000)
     }
 }
