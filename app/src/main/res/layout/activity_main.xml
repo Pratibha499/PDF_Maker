@@ -11,6 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/toolbar_red"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 

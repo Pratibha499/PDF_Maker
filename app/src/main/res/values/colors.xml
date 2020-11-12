@@ -6,5 +6,5 @@
     <color name="splash_screen_white">#fff</color>
 
     <!-- Toolbar color-->
-    <color name="toolbar_red">F3E61F1F</color>
+    <color name="toolbar_red">#F3E61F1F</color>
 </resources>
