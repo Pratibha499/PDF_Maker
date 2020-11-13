@@ -30,13 +30,12 @@ class MainActivity : AppCompatActivity() {
         coordinatorLayout =findViewById(R.id.coordinator_layout)
         navigationView = findViewById(R.id.navigation_view)
 
-
         // function call
         setUpToolbar()
 
         // Tie the functionality of DrawerLayout and the framework ActionBar
         val actionBarDrawerToggle = ActionBarDrawerToggle(
-            this,
+            this@MainActivity,
             drawerLayout,
             R.string.open_nav_drawer,
             R.string.close_nav_drawer
