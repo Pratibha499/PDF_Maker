@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawer_layout)
         frameLayout = findViewById(R.id.frame)
         coordinatorLayout =findViewById(R.id.coordinator_layout)
+        navigationView = findViewById(R.id.navigation_view)
+
 
         // function call
         setUpToolbar()
