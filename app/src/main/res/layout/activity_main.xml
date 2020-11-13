@@ -40,6 +40,9 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/allPdfButton"/>
+
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
