@@ -49,8 +49,12 @@
         <Button
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:text="All PDF"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp"></Button>
+            android:layout_marginBottom="10dp"
+            android:text="@string/all_pdf"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_allpdf"
+            android:background="@color/toolbar_red"
+            />
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
