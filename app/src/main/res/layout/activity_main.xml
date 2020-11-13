@@ -49,7 +49,8 @@
             android:text="@string/all_pdf"
             android:textAllCaps="true"
             android:textSize="18sp"
-            android:textStyle="bold|italic"/>
+            android:textStyle="bold|italic"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
