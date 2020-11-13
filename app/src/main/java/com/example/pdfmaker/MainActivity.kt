@@ -1,8 +1,10 @@
 package com.example.pdfmaker
 
 import android.os.Bundle
+import android.widget.FrameLayout
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.ContentFrameLayout
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var coordinateLayout: CoordinatorLayout
-
+    lateinit var frameLayout: FrameLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
