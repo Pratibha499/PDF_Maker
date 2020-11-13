@@ -21,5 +21,6 @@ class MainActivity : AppCompatActivity() {
     // Toolbar Setup
     private fun setUpToolbar() {
         setSupportActionBar(toolbar)
+        supportActionBar?.setTitle("PDF MAKER")
     }
 }
