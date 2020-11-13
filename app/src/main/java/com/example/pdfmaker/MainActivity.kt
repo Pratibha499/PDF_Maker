@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         // function call
         setUpToolbar()
 
+        // Tie the functionality of DrawerLayout and the framework ActionBar
         val actionBarDrawerToggle = ActionBarDrawerToggle(
             this,
             drawerLayout,
