@@ -56,6 +56,9 @@
             android:drawableLeft="@drawable/ic_allpdf"
             android:background="@color/toolbar_red"
             android:textAllCaps="true"
-            android:textStyle="bold|italic"/>
+            android:textStyle="bold|italic"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"/>
+
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
