@@ -24,7 +24,12 @@ class MainActivity : AppCompatActivity() {
         // function call
         setUpToolbar()
 
-        val ActionBarDrawerToggle: ActionBarDrawerToggle(this, drawerLayout, )
+        val actionBarDrawerToggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            R.string.open_nav_drawer,
+            R.string.close_nav_drawer
+        )
     }
 
     /*
