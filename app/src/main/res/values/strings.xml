@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PDF MAKER</string>
+    <string name="open_nav_drawer">Open Navigation Drawer</string>
 </resources>
