@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         // id of Views are initialised to the variables
         toolbar = findViewById(R.id.toolbar)
         drawerLayout = findViewById(R.id.drawer_layout)
+        frameLayout = findViewById(R.id.frame)
 
 
         // function call
