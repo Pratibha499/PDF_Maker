@@ -55,6 +55,7 @@
             android:textSize="18sp"
             android:drawableLeft="@drawable/ic_allpdf"
             android:background="@color/toolbar_red"
-            />
+            android:textAllCaps="true"
+            android:textStyle="bold|italic"/>
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
