@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         // Title set on toolbar
         supportActionBar?.setTitle("PDF MAKER")
         // Get a support ActionBar corresponding to this toolbar and enable the Up button
+        supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }
