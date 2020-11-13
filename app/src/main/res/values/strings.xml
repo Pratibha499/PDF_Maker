@@ -6,4 +6,5 @@
     <!-- close drawer string-->
     <string name="close_nav_drawer">Close Navigation Drawer</string>
     <string name="all_pdf">ALL PDF</string>
+    <string name="about">About</string>
 </resources>
