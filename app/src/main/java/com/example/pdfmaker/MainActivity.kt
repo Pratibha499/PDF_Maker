@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     // lateinit is used as promise that the variable will be initialised later
     private lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
-    lateinit var coordinatorLayoutLayout: CoordinatorLayout
+    lateinit var coordinatorLayout: CoordinatorLayout
     lateinit var frameLayout: FrameLayout
     lateinit var navigationView: NavigationView
 
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         drawerLayout = findViewById(R.id.drawer_layout)
         frameLayout = findViewById(R.id.frame)
+        coordinatorLayout =findViewById(R.id.coordinator_layout)
 
         // function call
         setUpToolbar()
