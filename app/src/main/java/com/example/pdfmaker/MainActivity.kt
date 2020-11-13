@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
             R.string.open_nav_drawer,
             R.string.close_nav_drawer
         )
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
     }
 
     /*
