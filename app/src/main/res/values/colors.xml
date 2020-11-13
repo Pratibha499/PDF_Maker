@@ -7,4 +7,6 @@
 
     <!-- Toolbar color-->
     <color name="toolbar_red">#F3E61F1F</color>
+
+    <color name="button_background_Color">#F3E61F1F</color>
 </resources>
