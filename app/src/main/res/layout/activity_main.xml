@@ -73,7 +73,8 @@
             android:textStyle="bold|italic"
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
-            tools:ignore="RtlSymmetry"/>
+            tools:ignore="RtlSymmetry"
+            android:id="@+id/createPDFButton"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
