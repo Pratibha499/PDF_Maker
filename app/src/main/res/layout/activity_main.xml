@@ -86,7 +86,10 @@
             android:background="@color/toolbar_red"
             android:textSize="18sp"
             android:textAllCaps="true"
-            android:textStyle="bold|italic"/>
+            android:textStyle="bold|italic"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
