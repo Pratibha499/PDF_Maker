@@ -77,5 +77,9 @@
             android:id="@+id/createPDFButton"
             android:drawableLeft="@drawable/ic_createpdf"/>
 
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"/>
+
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
