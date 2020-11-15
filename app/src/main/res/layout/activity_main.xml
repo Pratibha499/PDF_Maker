@@ -59,7 +59,8 @@
             android:textStyle="bold|italic"
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:drawableStart="@drawable/ic_allpdf" />
 
         <Button
             android:layout_width="180dp"
@@ -75,7 +76,8 @@
             android:paddingStart="20dp"
             tools:ignore="RtlSymmetry"
             android:id="@+id/createPDFButton"
-            android:drawableLeft="@drawable/ic_createpdf"/>
+            android:drawableLeft="@drawable/ic_createpdf"
+            android:drawableStart="@drawable/ic_createpdf" />
 
         <Button
             android:layout_width="180dp"
@@ -91,7 +93,8 @@
             android:paddingStart="20dp"
             tools:ignore="RtlSymmetry"
             android:id="@+id/mergePDFButton"
-            android:drawableLeft="@drawable/ic_mergepdf"/>
+            android:drawableLeft="@drawable/ic_mergepdf"
+            android:drawableStart="@drawable/ic_mergepdf"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
