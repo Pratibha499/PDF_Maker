@@ -83,7 +83,10 @@
             android:layout_marginBottom="10dp"
             android:text="@string/merge_pdf"
             android:textColor="#ffffff"
-            android:background="@color/toolbar_red"/>
+            android:background="@color/toolbar_red"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:textStyle="bold|italic"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
