@@ -74,7 +74,8 @@
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
             tools:ignore="RtlSymmetry"
-            android:id="@+id/createPDFButton"/>
+            android:id="@+id/createPDFButton"
+            android:drawableLeft="@drawable/ic_createpdf"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
