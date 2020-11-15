@@ -90,7 +90,8 @@
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
             tools:ignore="RtlSymmetry"
-            android:id="@+id/mergePDFButton"/>
+            android:id="@+id/mergePDFButton"
+            android:drawableLeft="@drawable/ic_mergepdf"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
