@@ -9,4 +9,5 @@
     <string name="about">About</string>
     <string name="pdf_maker">PDF MAKER</string>
     <string name="create_pdf">CREATE PDF</string>
+    <string name="merge_pdf">MERGE PDF</string>
 </resources>
