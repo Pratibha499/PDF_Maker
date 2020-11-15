@@ -65,7 +65,8 @@
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
             android:text="@string/create_pdf"
-            />
+            android:textColor="#ffffff"
+            android:background="@color/toolbar_red"/>
 
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
