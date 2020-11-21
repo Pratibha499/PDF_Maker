@@ -8,12 +8,13 @@
 
     <ImageButton
         android:id="@+id/galleryButton"
-        android:layout_width="109dp"
-        android:layout_height="84dp"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_gallery"/>
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:background="@drawable/round_gallery_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
