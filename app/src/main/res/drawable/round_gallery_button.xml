@@ -5,6 +5,7 @@
 
         <shape android:shape="oval">
             <solid android:color="@color/button_background_Color"></solid>
+            <size android:height="180dp" android:width="180dp"></size>
         </shape>
 
     </item>
