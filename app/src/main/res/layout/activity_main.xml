@@ -77,7 +77,8 @@
             tools:ignore="RtlSymmetry"
             android:id="@+id/createPDFButton"
             android:drawableLeft="@drawable/ic_createpdf"
-            android:drawableStart="@drawable/ic_createpdf" />
+            android:drawableStart="@drawable/ic_createpdf"
+            android:onClick="gotoCreatePdfActivity"/>
 
         <Button
             android:layout_width="180dp"
