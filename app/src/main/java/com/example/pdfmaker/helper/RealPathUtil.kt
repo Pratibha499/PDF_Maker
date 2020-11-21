@@ -11,6 +11,7 @@ object RealPathUtil {
 
     fun getRealPathFromURI_API19(context: Context, uri: Uri): String? {
 
+        var filePath: String? = ""
 
         return ""
     }
