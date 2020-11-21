@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.ContentFrameLayout
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // id of Views are initialised to the variables
+        /****  id of Views are initialised to the variables  ****/
         toolbar = findViewById(R.id.toolbar)
         drawerLayout = findViewById(R.id.drawer_layout)
         frameLayout = findViewById(R.id.frame)
@@ -37,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         // function call
         setUpToolbar()
 
-        // Tie the functionality of DrawerLayout and the framework ActionBar
+        /**** Tie the functionality of DrawerLayout and the framework ActionBar  ****/
         val actionBarDrawerToggle = ActionBarDrawerToggle(
             this@MainActivity,
             drawerLayout,
@@ -49,9 +48,7 @@ class MainActivity : AppCompatActivity() {
         actionBarDrawerToggle.syncState()
     }
 
-    /*
-           Toolbar Setup
-    */
+    /****    Toolbar Setup    ****/
     private fun setUpToolbar() {
         setSupportActionBar(toolbar)
         // Title set on toolbar
@@ -72,6 +69,9 @@ class MainActivity : AppCompatActivity() {
 
     fun gotoCreatePdfActivity(view: View) {
         //kotlin code to go to next activity
-        startActivity( Intent(this,CreatePdf::class.java))
+        startActivity(Intent(this, CreatePdf::class.java))
     }
+
+    // Function to go to next Activity on button press
+
 }
