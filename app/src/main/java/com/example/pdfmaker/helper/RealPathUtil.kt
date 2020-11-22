@@ -10,8 +10,9 @@ object RealPathUtil {
 
     /** Annotation by Android Lint Tool **/
     @SuppressLint("NewApi")
+
             /** API-19 **/
-    fun getPathFromUri(context: Context, uri: Uri): String? {
+    fun getPathFromURI_API19(context: Context, uri: Uri): String? {
         var filePath: String? = ""
         if (DocumentsContract.isDocumentUri(context, uri)) {
             // Will return "image:x*"
@@ -23,23 +24,33 @@ object RealPathUtil {
                 val column = arrayOf(MediaStore.Images.Media.DATA)
                 // where id is equal to
                 val sel = MediaStore.Images.Media._ID + "=?"
-                // Media provider to access all Image type files on the External Storag
+                // Media provider to access all Image type files on the External Storage
                 // contentResolver used to access data in content provider
                 val cursor = context.contentResolver.query(
                     MediaStore.Images.Media.EXTERNAL_CONTENT_URI,     // The content:// style URI for the "primary" external storage volume
                     column, sel, arrayOf(id), null
                 )
                 val columnIndex = cursor!!.getColumnIndex(column[0])
-                // move the first cursor to first row
+                // move the cursor to first row
                 if (cursor.moveToFirst()) {
                     filePath = cursor.getString(columnIndex)
                 }
+                // cursor is closed
                 cursor.close()
             }
         } else {
             filePath = uri.path
         }
-
         return filePath
     }
+
+
+    @SuppressLint("NewApi")
+
+            /** API - 11 to 18 **/
+    fun getRealPathFromURI_API11to18(context: Context?, contentUri: Uri?): String? {
+
+
+    }
+
 }
