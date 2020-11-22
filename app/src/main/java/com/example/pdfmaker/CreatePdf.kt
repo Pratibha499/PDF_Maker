@@ -24,7 +24,13 @@ class CreatePdf : AppCompatActivity() {
     }
 
     fun createFilesDirectory() {
+        // Directory for all files
         val rootPath = File(Environment.getExternalStorageDirectory(), "PDF MAKER Files")
-        if (!rootPath.exists())
+        // If path does not exist
+        if (!rootPath.exists()) {
+            // will make a directory for it
+            rootPath.mkdirs()
+
+        }
     }
 }
