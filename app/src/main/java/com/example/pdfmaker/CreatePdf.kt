@@ -20,4 +20,8 @@ class CreatePdf : AppCompatActivity() {
             ), PackageManager.PERMISSION_GRANTED
         )
     }
+
+    fun createFilesDirectory() {
+
+    }
 }
