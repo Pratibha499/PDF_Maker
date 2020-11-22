@@ -49,8 +49,11 @@ object RealPathUtil {
 
             /** API - 11 to 18 **/
     fun getRealPathFromURI_API11to18(context: Context?, contentUri: Uri?): String? {
+        val projection =
+            arrayOf(MediaStore.Images.Media.DATA)  // projection is an array of columns that should be included for each row retrieved.
 
 
+        return ""
     }
 
 }
