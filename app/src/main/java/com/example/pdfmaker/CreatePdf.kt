@@ -7,10 +7,7 @@ import android.os.Environment
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.IOException
+import java.io.*
 
 class CreatePdf : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,5 +51,18 @@ class CreatePdf : AppCompatActivity() {
         } catch (e: IOException) {
             e.printStackTrace()
         }
+
+        try {
+            val mInput = FileInputStream(dataFile)
+
+            val data = ByteArray(128)
+            mInput.read(data)
+            mInput.close()
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        dataFile.delete()
     }
 }
