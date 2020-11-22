@@ -29,6 +29,8 @@ object RealPathUtil {
                     MediaStore.Images.Media.EXTERNAL_CONTENT_URI,     // The content:// style URI for the "primary" external storage volume
                     column, sel, arrayOf(id), null
                 )
+                val columnIndex = cursor!!.getColumnIndex(column[0])
+
             }
         }
 
