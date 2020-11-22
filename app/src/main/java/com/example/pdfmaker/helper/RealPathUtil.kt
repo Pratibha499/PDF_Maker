@@ -67,5 +67,9 @@ object RealPathUtil {
         return result
     }
 
+    /** Below API - 11 **/
+    fun getRealPathFromURI_BelowAPI11(context: Context, contentUri: Uri?): String {
+
+    }
 
 }
