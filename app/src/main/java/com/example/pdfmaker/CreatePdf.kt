@@ -8,6 +8,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
 
 class CreatePdf : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +43,16 @@ class CreatePdf : AppCompatActivity() {
             Toast.makeText(this, "Cannot use External Storage", Toast.LENGTH_SHORT)
             finish()
             return
+        }
+        try {
+            val mOutput = FileOutputStream(dataFile, false)
+            val data = "DATA"
+            mOutput.write(data.toByteArray())
+            mOutput.close()
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
     }
 }
