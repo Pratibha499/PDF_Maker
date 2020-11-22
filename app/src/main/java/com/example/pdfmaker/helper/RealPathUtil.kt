@@ -30,7 +30,10 @@ object RealPathUtil {
                     column, sel, arrayOf(id), null
                 )
                 val columnIndex = cursor!!.getColumnIndex(column[0])
-
+                // move the first cursor to first row
+                if (cursor.moveToFirst()) {
+                    filePath = cursor.getString(columnIndex)
+                }
             }
         }
 
