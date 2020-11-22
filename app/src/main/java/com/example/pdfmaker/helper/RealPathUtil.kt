@@ -69,7 +69,10 @@ object RealPathUtil {
 
     /** Below API - 11 **/
     fun getRealPathFromURI_BelowAPI11(context: Context, contentUri: Uri?): String {
-
+        val projection = arrayOf(MediaStore.Images.Media.DATA)
+        val cursor = context.contentResolver.query(contentUri!!, projection, null, null, null)
+        val column_index = cursor!!.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        cursor.moveToFirst()
+        return cursor.getString(column_index)
     }
-
 }
