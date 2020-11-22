@@ -38,6 +38,8 @@ class CreatePdf : AppCompatActivity() {
         if (Environment.getExternalStorageState() != Environment.MEDIA_MOUNTED) {
             // Toast is a message in the form of popup to the user
             Toast.makeText(this, "Cannot use External Storage", Toast.LENGTH_SHORT)
+            finish()
+            return
         }
     }
 }
