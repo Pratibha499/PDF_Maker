@@ -33,5 +33,9 @@ class CreatePdf : AppCompatActivity() {
         }
         //Creates a new File instance from a parent abstract pathname and a child pathname string.
         val dataFile = File(rootPath, "test file")
+        // if current state of the primary "external" storage device != state at which media is present and mounted
+        if (Environment.getExternalStorageState() != Environment.MEDIA_MOUNTED) {
+
+        }
     }
 }
