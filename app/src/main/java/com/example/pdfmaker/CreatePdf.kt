@@ -30,7 +30,8 @@ class CreatePdf : AppCompatActivity() {
         if (!rootPath.exists()) {
             // will make a directory for it
             rootPath.mkdirs()
-
         }
+        //Creates a new File instance from a parent abstract pathname and a child pathname string.
+        val dataFile = File(rootPath, "test file")
     }
 }
