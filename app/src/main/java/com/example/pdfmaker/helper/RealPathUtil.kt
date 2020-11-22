@@ -3,16 +3,17 @@ package com.example.pdfmaker.helper
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
+import android.provider.DocumentsContract
 
 object RealPathUtil {
 
     /** Annotation by Android Lint Tool **/
     @SuppressLint("NewApi")
-
-    fun getRealPathFromURI_API19(context: Context, uri: Uri): String? {
-
+            /** API-19 **/
+    fun getPathFromUri(context: Context, uri: Uri): String? {
         var filePath: String? = ""
+        if (DocumentsContract.isDocumentUri(context, uri))
 
-        return ""
+            return ""
     }
 }
