@@ -56,9 +56,16 @@ object RealPathUtil {
         // loader that queries the ContentResolver and returns a Cursor
         val cursorLoader = CursorLoader(context, contentUri, projection, null, null, null)
         val cursor = cursorLoader.loadInBackground()
-
-
-        return ""
+        // when cursor not equal null
+        if (cursor != null) {
+            // column index
+            val column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+            // cursor will move to first row
+            cursor.moveToFirst()
+            result = cursor.getString(column_index)
+        }
+        return result
     }
+
 
 }
