@@ -34,9 +34,12 @@ object RealPathUtil {
                 if (cursor.moveToFirst()) {
                     filePath = cursor.getString(columnIndex)
                 }
+                cursor.close()
             }
+        } else {
+            filePath = uri.path
         }
 
-        return ""
+        return filePath
     }
 }
