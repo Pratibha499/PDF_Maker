@@ -2,6 +2,7 @@ package com.example.pdfmaker.helper
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.CursorLoader
 import android.net.Uri
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -52,6 +53,10 @@ object RealPathUtil {
         val projection =
             arrayOf(MediaStore.Images.Media.DATA)  // projection is an array of columns that should be included for each row retrieved.
         var result: String? = null
+        // loader that queries the ContentResolver and returns a Cursor
+        val cursorLoader = CursorLoader(context, contentUri, projection, null, null, null)
+        val cursor = cursorLoader.loadInBackground()
+
 
         return ""
     }
