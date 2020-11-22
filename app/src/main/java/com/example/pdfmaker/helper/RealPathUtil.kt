@@ -26,7 +26,7 @@ object RealPathUtil {
                 // Media provider to access all Image type files on the External Storag
                 // contentResolver used to access data in content provider
                 val cursor = context.contentResolver.query(
-                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,     // content URI
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,     // The content:// style URI for the "primary" external storage volume
                     column, sel, arrayOf(id), null
                 )
             }
