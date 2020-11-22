@@ -3,8 +3,10 @@ package com.example.pdfmaker
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Environment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import java.io.File
 
 class CreatePdf : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,6 @@ class CreatePdf : AppCompatActivity() {
     }
 
     fun createFilesDirectory() {
-
+        val rootPath = File(Environment.getExternalStorageDirectory(), "PDF MAKER Files")
     }
 }
