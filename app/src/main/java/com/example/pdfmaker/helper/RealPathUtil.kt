@@ -13,7 +13,10 @@ object RealPathUtil {
     fun getPathFromUri(context: Context, uri: Uri): String? {
         var filePath: String? = ""
         if (DocumentsContract.isDocumentUri(context, uri)) {
+            // Will return "image:x*"
             val documentId = DocumentsContract.getDocumentId(uri)
+            // Split at colon, use second item in the array
+            val splitId = documentId.split(":").toTypedArray()
         }
 
         return ""
