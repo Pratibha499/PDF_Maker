@@ -12,8 +12,10 @@ object RealPathUtil {
             /** API-19 **/
     fun getPathFromUri(context: Context, uri: Uri): String? {
         var filePath: String? = ""
-        if (DocumentsContract.isDocumentUri(context, uri))
+        if (DocumentsContract.isDocumentUri(context, uri)) {
+            val documentId = DocumentsContract.getDocumentId(uri)
+        }
 
-            return ""
+        return ""
     }
 }
