@@ -22,6 +22,9 @@ class CreatePdf : AppCompatActivity() {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE         // Request permission to write
             ), PackageManager.PERMISSION_GRANTED
         )
+
+        // Function call
+        createFilesDirectory()
     }
 
     fun createFilesDirectory() {
