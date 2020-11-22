@@ -16,7 +16,10 @@ object RealPathUtil {
             // Will return "image:x*"
             val documentId = DocumentsContract.getDocumentId(uri)
             // Split at colon, use second item in the array
-            val splitId = documentId.split(":").toTypedArray()
+            val idArraySplit = documentId.split(":").toTypedArray()
+            if (idArraySplit.size == 2) {
+                val id = idArraySplit[1]
+            }
         }
 
         return ""
