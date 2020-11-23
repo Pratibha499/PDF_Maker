@@ -43,6 +43,9 @@ class CreatePdf : AppCompatActivity() {
 
         // Function call
         createFilesDirectory()
+
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), PackageManager.PERMISSION_GRANTED)
+
     }
 
     private fun createFilesDirectory() {
