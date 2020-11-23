@@ -19,6 +19,8 @@ class CreatePdf : AppCompatActivity() {
     // Image URI
     private var file: Uri? = null
 
+    // PDF document
+    var pdfDocument: PdfDocument? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,11 +97,10 @@ class CreatePdf : AppCompatActivity() {
         val clipData = data!!.clipData
 
         //Iff user permits
-        if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK && clipData != null)
-        {
+        if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK && clipData != null) {
 
         }
 
-            super.onActivityResult(requestCode, resultCode, data)
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
