@@ -116,6 +116,8 @@ class CreatePdf : AppCompatActivity() {
                 val startPage = pdfDocument!!.startPage(pageInfo)
                 // draw something on the page
                 startPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
+                // finish Page
+                pdfDocument!!.finishPage(startPage)
 
 
             }
