@@ -52,7 +52,7 @@ class CreatePdf : AppCompatActivity() {
     }
 
     fun CameraButton(view: View?) {
-        val file = directory + randomName + ".jpg"
+        val file = "$directory$randomName.jpg"
         val newFile = File(file)
         try {
             newFile.createNewFile()
