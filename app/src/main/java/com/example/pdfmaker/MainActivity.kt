@@ -2,8 +2,10 @@ package com.example.pdfmaker
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.content.res.Configuration
 import android.os.Bundle
+import android.os.Environment
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
@@ -26,7 +28,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var coordinatorLayout: CoordinatorLayout
     lateinit var frameLayout: FrameLayout
     lateinit var navigationView: NavigationView
-    lateinit var languageButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         frameLayout = findViewById(R.id.frame)
         coordinatorLayout = findViewById(R.id.coordinator_layout)
         navigationView = findViewById(R.id.navigation_view)
-        languageButton = findViewById(R.id.SwitchLanguage)
 
         // function call
         setUpToolbar()
@@ -53,10 +53,6 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
-
-        languageButton.setOnClickListener {
-            showChangelanguage()
-        }
     }
 
     /****    Toolbar Setup    ****/
@@ -79,38 +75,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    /** Language Change - Hindi & English **/
-    fun showChangelanguage() {
-        val listlanguage = arrayOf("Hindi", "English")
-        val mBuilder = AlertDialog.Builder(this@MainActivity)
-        mBuilder.setTitle("Choose Language")
-        mBuilder.setSingleChoiceItems(listlanguage, -1) { dialog, which ->
-            if (which == 0) {
-                setLocate("hi")
-                recreate()
-            } else if (which == 1) {
-                setLocate("en")
-                recreate()
-            }
-            dialog.dismiss()
-        }
-        val mDialog = mBuilder.create()
-        mDialog.show()
-    }
-
-    fun setLocate(Lang: String) {
-        val locale = Locale(Lang)
-        Locale.setDefault(locale)
-        val config = Configuration()
-        config.locale = locale
-        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-        val editor = getSharedPreferences("settings", Context.MODE_PRIVATE).edit()
-        editor.putString("My_Lang", Lang)
-        editor.apply()
-    }
-
-    //kotlin code to go to next activity
     fun gotoCreatePdfActivity(view: View) {
+        //kotlin code to go to next activity
         startActivity(Intent(this, CreatePdf::class.java))
     }
+
 }

@@ -10,6 +10,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.os.StrictMode
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -26,6 +28,7 @@ class CreatePdf : AppCompatActivity() {
 
     // PDF document
     var pdfDocument: PdfDocument? = null
+    val directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() + "/Camera/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,8 +45,26 @@ class CreatePdf : AppCompatActivity() {
 
         // Function call
         createFilesDirectory()
+
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), PackageManager.PERMISSION_GRANTED)
+        val builder = StrictMode.VmPolicy.Builder()
+        StrictMode.setVmPolicy(builder.build())
     }
 
+    fun CameraButton(view: View?) {
+        val file = "$directory$randomName.jpg"
+        val newFile = File(file)
+        try {
+            newFile.createNewFile()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        val outputFileUri = Uri.fromFile(newFile)
+        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri)
+        startActivity(cameraIntent)
+
+    }
     private fun createFilesDirectory() {
         // Directory for all files
         val rootPath = File(Environment.getExternalStorageDirectory(), "PDF MAKER Files")
