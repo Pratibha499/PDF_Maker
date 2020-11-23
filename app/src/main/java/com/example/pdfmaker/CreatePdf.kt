@@ -26,6 +26,7 @@ class CreatePdf : AppCompatActivity() {
 
     // PDF document
     var pdfDocument: PdfDocument? = null
+    val directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() + "/Camera/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
