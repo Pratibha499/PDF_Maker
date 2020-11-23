@@ -188,4 +188,10 @@ class CreatePdf : AppCompatActivity() {
         }
 
 
+    override fun onRestart() {
+        super.onRestart()
+        super.onResume()
+        Toast.makeText(this, "PDF Created Successfully", Toast.LENGTH_SHORT).show()
+    }
+
 }
