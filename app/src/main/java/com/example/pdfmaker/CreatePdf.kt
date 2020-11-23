@@ -6,10 +6,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.pdf.PdfDocument
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.io.*
@@ -90,6 +92,7 @@ class CreatePdf : AppCompatActivity() {
 
 
     /** Check whether Permission granted by user **/
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         Log.d("onActivityResult: ", "Activity result came out")
 
@@ -98,7 +101,8 @@ class CreatePdf : AppCompatActivity() {
 
         //Iff user permits
         if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK && clipData != null) {
-
+            // creates a document
+            pdfDocument = PdfDocument()
         }
 
         super.onActivityResult(requestCode, resultCode, data)
