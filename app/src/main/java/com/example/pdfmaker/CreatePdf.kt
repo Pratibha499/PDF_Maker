@@ -121,6 +121,7 @@ class CreatePdf : AppCompatActivity() {
             }
             // location of PDF document and a random name to it
             val pdfFile = "/storage/emulated/0/MY_PDF_CONVERTER/$randomName.pdf"
+            Log.d("onActivityResult: ", pdfFile)
 
         }
         }
