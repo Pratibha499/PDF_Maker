@@ -1,6 +1,7 @@
 package com.example.pdfmaker
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
@@ -27,7 +28,7 @@ class CreatePdf : AppCompatActivity() {
         createFilesDirectory()
     }
 
-    fun createFilesDirectory() {
+    private fun createFilesDirectory() {
         // Directory for all files
         val rootPath = File(Environment.getExternalStorageDirectory(), "PDF MAKER Files")
         // If path does not exist
@@ -67,5 +68,11 @@ class CreatePdf : AppCompatActivity() {
             e.printStackTrace()
         }
         dataFile.delete()
+    }
+
+    /** Check whether Permission granted by user **/
+    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }

@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         drawerLayout = findViewById(R.id.drawer_layout)
         frameLayout = findViewById(R.id.frame)
-        coordinatorLayout =findViewById(R.id.coordinator_layout)
+        coordinatorLayout = findViewById(R.id.coordinator_layout)
         navigationView = findViewById(R.id.navigation_view)
 
         // function call
@@ -59,19 +59,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id =item.itemId
-        if(id==android.R.id.home){
+        val id = item.itemId
+        if (id == android.R.id.home) {
             drawerLayout.openDrawer(GravityCompat.START)
-        }
 
+        }
         return super.onOptionsItemSelected(item)
     }
+
 
     fun gotoCreatePdfActivity(view: View) {
         //kotlin code to go to next activity
         startActivity(Intent(this, CreatePdf::class.java))
     }
 
-    // Function to go to next Activity on button press
 
 }
