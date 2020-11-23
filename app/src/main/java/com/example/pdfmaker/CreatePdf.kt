@@ -73,7 +73,8 @@ class CreatePdf : AppCompatActivity() {
 
     // object that is common to all instances of this class like static in java
     companion object {
-
+        // Assume any integer type Number
+        const val IMAGE_PICK_CODE = 1
     }
 
 
