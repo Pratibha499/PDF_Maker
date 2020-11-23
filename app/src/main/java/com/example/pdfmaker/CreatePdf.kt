@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -192,6 +193,15 @@ class CreatePdf : AppCompatActivity() {
         super.onRestart()
         super.onResume()
         Toast.makeText(this, "PDF Created Successfully", Toast.LENGTH_SHORT).show()
+    }
+
+
+    fun convertToPdf(view: View?) {
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+        intent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), IMAGE_PICK_CODE)
     }
 
 }

@@ -73,5 +73,4 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, CreatePdf::class.java))
     }
 
-
 }
