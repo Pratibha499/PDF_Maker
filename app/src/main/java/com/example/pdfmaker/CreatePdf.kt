@@ -1,6 +1,7 @@
 package com.example.pdfmaker
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -85,7 +86,7 @@ class CreatePdf : AppCompatActivity() {
 
         // Multiple Image selection from phone gallery
         val clipData = data!!.clipData
-        if (requestCode == IMAGE_PICK_CODE)
+        if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK)
 
             super.onActivityResult(requestCode, resultCode, data)
     }
