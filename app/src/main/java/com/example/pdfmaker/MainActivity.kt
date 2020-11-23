@@ -78,7 +78,8 @@ class MainActivity : AppCompatActivity() {
     fun gotoFiles(view: View){
         val intent = Intent(Intent.ACTION_VIEW)
         val mydir = Uri.parse(Environment.getExternalStorageState())
-
+        intent.setDataAndType(mydir, "*/*")
+        startActivity(intent)
     }
 
 }
