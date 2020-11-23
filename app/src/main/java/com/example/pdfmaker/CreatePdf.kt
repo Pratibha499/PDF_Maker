@@ -62,7 +62,7 @@ class CreatePdf : AppCompatActivity() {
         val outputFileUri = Uri.fromFile(newFile)
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri)
-
+        startActivity(cameraIntent)
 
     }
     private fun createFilesDirectory() {
