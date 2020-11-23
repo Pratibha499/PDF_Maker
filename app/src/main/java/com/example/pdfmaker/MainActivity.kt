@@ -110,7 +110,8 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
     }
 
-    fun goToCreatePdfActivity() {
+    //kotlin code to go to next activity
+    fun gotoCreatePdfActivity(view: View) {
         startActivity(Intent(this, CreatePdf::class.java))
     }
 }
