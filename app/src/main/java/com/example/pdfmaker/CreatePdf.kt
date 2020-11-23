@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -72,6 +73,7 @@ class CreatePdf : AppCompatActivity() {
 
     /** Check whether Permission granted by user **/
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        Log.d("onActivityResult: ", "Activity result came out")
 
         super.onActivityResult(requestCode, resultCode, data)
     }
