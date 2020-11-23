@@ -4,6 +4,8 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.pdf.PdfDocument
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -13,6 +15,11 @@ import androidx.core.app.ActivityCompat
 import java.io.*
 
 class CreatePdf : AppCompatActivity() {
+
+    // Image URI
+    private var file: Uri? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_pdf)
@@ -86,7 +93,12 @@ class CreatePdf : AppCompatActivity() {
 
         // Multiple Image selection from phone gallery
         val clipData = data!!.clipData
+
+        //Iff user permits
         if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK && clipData != null)
+        {
+
+        }
 
             super.onActivityResult(requestCode, resultCode, data)
     }
