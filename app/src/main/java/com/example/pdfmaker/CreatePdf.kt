@@ -73,8 +73,9 @@ class CreatePdf : AppCompatActivity() {
 
     // object that is common to all instances of this class like static in java
     companion object {
-        // Assume any integer type Number
+        // Assume any positive integer type Number
         const val IMAGE_PICK_CODE = 1
+
     }
 
 
@@ -84,8 +85,8 @@ class CreatePdf : AppCompatActivity() {
 
         // Multiple Image selection from phone gallery
         val clipData = data!!.clipData
+        if (requestCode == IMAGE_PICK_CODE)
 
-
-        super.onActivityResult(requestCode, resultCode, data)
+            super.onActivityResult(requestCode, resultCode, data)
     }
 }
