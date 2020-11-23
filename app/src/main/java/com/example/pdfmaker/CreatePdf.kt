@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.example.pdfmaker.helper.RealPathUtil
 import java.io.*
 
 class CreatePdf : AppCompatActivity() {
@@ -158,7 +159,17 @@ class CreatePdf : AppCompatActivity() {
 
     // function to convert image uri to filename
     private fun uriToFilename(uri: Uri?): String? {
+        var path: String? = null
+        path = if (Build.VERSION.SDK_INT < 11) {
+            // function call from RealPathUtil Object
+            RealPathUtil.getRealPathFromURI_BelowAPI11(this, uri)
+        } else if (Build.VERSION.SDK_INT < 19) {
+            RealPathUtil.getRealPathFromURI_API11to18(this, uri)
+        } else {
+            RealPathUtil.getPathFromURI_API19(this, uri!!)
+        }
 
-        return ""
+        // Path created
+        return path
     }
 }
