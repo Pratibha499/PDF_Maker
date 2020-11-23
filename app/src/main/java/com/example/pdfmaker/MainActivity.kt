@@ -18,6 +18,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var coordinatorLayout: CoordinatorLayout
     lateinit var frameLayout: FrameLayout
     lateinit var navigationView: NavigationView
+    lateinit var languageButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         frameLayout = findViewById(R.id.frame)
         coordinatorLayout = findViewById(R.id.coordinator_layout)
         navigationView = findViewById(R.id.navigation_view)
+        languageButton = findViewById(R.id.Switch_Language)
 
         // function call
         setUpToolbar()
@@ -53,6 +56,12 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
+
+        /** Language Change on Button Click **/
+        languageButton.setOnClickListener {
+            showchangelanguage()
+        }
+
     }
 
     /****    Toolbar Setup    ****/
@@ -72,6 +81,38 @@ class MainActivity : AppCompatActivity() {
 
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    /** Language **/
+
+    fun showchangelanguage() {
+        val listlanguage = arrayOf("Hindi", "English")
+        val mBuilder = AlertDialog.Builder(this@MainActivity)
+        mBuilder.setTitle("Choose Language")
+        mBuilder.setSingleChoiceItems(listlanguage, -1) { dialog, which ->
+            if (which == 0) {
+                setLocate("hi")
+                recreate()
+            } else if (which == 1) {
+                setLocate("en")
+                recreate()
+            }
+            dialog.dismiss()
+        }
+        val mDialog = mBuilder.create()
+        mDialog.show()
+    }
+
+    fun setLocate(Lang: String) {
+        val locale = Locale(Lang)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
     }
 
 
