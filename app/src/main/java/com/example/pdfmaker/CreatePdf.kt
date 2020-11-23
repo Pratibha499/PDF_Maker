@@ -130,7 +130,11 @@ class CreatePdf : AppCompatActivity() {
             }
             // document closed
             pdfDocument!!.close()
+        }
 
+        // if single image is picked
+        else if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) {
+            file = data.data
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
