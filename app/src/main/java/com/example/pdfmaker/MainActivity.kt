@@ -1,7 +1,9 @@
 package com.example.pdfmaker
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
@@ -71,6 +73,10 @@ class MainActivity : AppCompatActivity() {
     fun gotoCreatePdfActivity(view: View) {
         //kotlin code to go to next activity
         startActivity(Intent(this, CreatePdf::class.java))
+    }
+
+    fun gotoFiles(view: View){
+
     }
 
 }
