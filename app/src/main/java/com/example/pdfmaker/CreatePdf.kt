@@ -140,15 +140,15 @@ class CreatePdf : AppCompatActivity() {
             /** data (image) --> Bitmap --> Page --> PDF Document **/
             val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
             val pdfDocument = PdfDocument()
-            val mPageInfo = PdfDocument.PageInfo.Builder(5184, 3880, 1).create()
-            val mPage = pdfDocument.startPage(mPageInfo)
-            mPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
-            pdfDocument.finishPage(mPage)
-            val pdfFile = "/storage/emulated/0/PDF Maker Files/$randomName.pdf"
-            Log.d("onActivityResult: ", pdfFile)
-            val mpdfFile = File(pdfFile)
+            val pageInfo = PdfDocument.PageInfo.Builder(5184, 3880, 1).create()
+            val startPage = pdfDocument.startPage(pageInfo)
+            startPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
+            pdfDocument.finishPage(startPage)
+            val pdfFileDir = "/storage/emulated/0/PDF Maker Files/$randomName.pdf"
+            Log.d("onActivityResult: ", pdfFileDir)
+            val pdfFiles = File(pdfFileDir)
             try {
-                pdfDocument.writeTo(FileOutputStream(mpdfFile))
+                pdfDocument.writeTo(FileOutputStream(pdfFiles))
             } catch (e: IOException) {
                 e.printStackTrace()
             }
