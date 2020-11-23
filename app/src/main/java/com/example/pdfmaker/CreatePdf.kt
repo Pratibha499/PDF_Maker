@@ -75,6 +75,9 @@ class CreatePdf : AppCompatActivity() {
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         Log.d("onActivityResult: ", "Activity result came out")
 
+        // Multiple Image selection from phone gallery
+        val clipData = data!!.clipData
+
         super.onActivityResult(requestCode, resultCode, data)
     }
 }
