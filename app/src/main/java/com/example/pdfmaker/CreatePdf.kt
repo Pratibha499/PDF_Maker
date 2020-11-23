@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.graphics.pdf.PdfDocument
 import android.net.Uri
 import android.os.Build
@@ -107,10 +108,18 @@ class CreatePdf : AppCompatActivity() {
             for (i in 0 until clipData.itemCount) {
                 // uri of each data (image)
                 file = clipData.getItemAt(i).uri
+                // converted to bitmap (an image file format)
+                val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
+
+
             }
         }
-
-
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    // function to convert image uri to filename
+    private fun uriToFilename(uri: Uri?): String? {
+
+        return ""
     }
 }
