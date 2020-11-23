@@ -86,7 +86,7 @@ class CreatePdf : AppCompatActivity() {
 
         // Multiple Image selection from phone gallery
         val clipData = data!!.clipData
-        if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK)
+        if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK && clipData != null)
 
             super.onActivityResult(requestCode, resultCode, data)
     }
