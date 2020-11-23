@@ -6,9 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".CreatePdf">
 
+
+    <ImageButton
+        android:id="@+id/cameraButton"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="248dp"
+        android:background="@drawable/round_gallery_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+
     <ImageButton
         android:id="@+id/galleryButton"
-        android:layout_width="104dp"
+        android:layout_width="100dp"
         android:layout_height="104dp"
         android:background="@drawable/round_gallery_button"
         android:onClick="convertToPdf"
