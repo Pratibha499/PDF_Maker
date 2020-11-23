@@ -71,12 +71,19 @@ class CreatePdf : AppCompatActivity() {
         dataFile.delete()
     }
 
+    // object that is common to all instances of this class like static in java
+    companion object {
+
+    }
+
+
     /** Check whether Permission granted by user **/
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         Log.d("onActivityResult: ", "Activity result came out")
 
         // Multiple Image selection from phone gallery
         val clipData = data!!.clipData
+
 
         super.onActivityResult(requestCode, resultCode, data)
     }
