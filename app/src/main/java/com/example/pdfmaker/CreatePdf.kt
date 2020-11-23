@@ -10,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.os.StrictMode
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -45,7 +46,8 @@ class CreatePdf : AppCompatActivity() {
         createFilesDirectory()
 
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), PackageManager.PERMISSION_GRANTED)
-
+        val builder = StrictMode.VmPolicy.Builder()
+        StrictMode.setVmPolicy(builder.build())
     }
 
     private fun createFilesDirectory() {
