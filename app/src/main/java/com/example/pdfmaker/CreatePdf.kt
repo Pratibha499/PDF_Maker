@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.os.StrictMode
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -50,6 +51,10 @@ class CreatePdf : AppCompatActivity() {
         StrictMode.setVmPolicy(builder.build())
     }
 
+    fun CameraButton(view: View?) {
+
+
+    }
     private fun createFilesDirectory() {
         // Directory for all files
         val rootPath = File(Environment.getExternalStorageDirectory(), "PDF MAKER Files")
