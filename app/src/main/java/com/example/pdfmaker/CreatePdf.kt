@@ -110,6 +110,8 @@ class CreatePdf : AppCompatActivity() {
                 file = clipData.getItemAt(i).uri
                 // converted to bitmap (an image file format)
                 val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
+                // create a page description
+                val pageInfo = PdfDocument.PageInfo.Builder(1, 2160, i + 1).create()
 
 
             }
