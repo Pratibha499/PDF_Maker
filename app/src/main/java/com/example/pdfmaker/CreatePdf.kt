@@ -112,8 +112,11 @@ class CreatePdf : AppCompatActivity() {
                 val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
                 // create a page description
                 val pageInfo = PdfDocument.PageInfo.Builder(1, 2160, i + 1).create()
-                // start a Pag
-                val startPage = pdfDocument!!.startPage(PageInfo)
+                // start a Page
+                val startPage = pdfDocument!!.startPage(pageInfo)
+                // draw something on the page
+                startPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
+
 
             }
         }
