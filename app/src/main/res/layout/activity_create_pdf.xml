@@ -10,11 +10,12 @@
         android:id="@+id/galleryButton"
         android:layout_width="104dp"
         android:layout_height="104dp"
+        android:background="@drawable/round_gallery_button"
+        android:onClick="convertToPdf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_gallery"
-        android:background="@drawable/round_gallery_button" />
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

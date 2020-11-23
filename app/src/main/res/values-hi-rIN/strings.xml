@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all_pdf">सभी पीडीएफ देखें</string>
+    <string name="create_pdf">पीडीएफ बनाएं</string>
+    <string name="switch_language">भाषा स्विच करें</string>
+    <string name="merge_pdf">पीडीएफ विलय</string>
+    <string name="Language">भाषा स्विच</string>
+    <string name="about">ऐप के बारे में</string>
+</resources>
