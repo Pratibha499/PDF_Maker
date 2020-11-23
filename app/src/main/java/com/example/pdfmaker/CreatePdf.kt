@@ -120,10 +120,17 @@ class CreatePdf : AppCompatActivity() {
                 pdfDocument!!.finishPage(startPage)
             }
             // location of PDF document and a random name to it
-            val pdfFile = "/storage/emulated/0/MY_PDF_CONVERTER/$randomName.pdf"
-            Log.d("onActivityResult: ", pdfFile)
+            val pdfFileDir = "/storage/emulated/0/MY_PDF_CONVERTER/$randomName.pdf"
+            Log.d("onActivityResult: ", pdfFileDir)
+            val pdfFiles = File(pdfFileDir)
+            try {
+                pdfDocument!!.writeTo(FileOutputStream(pdfFiles))
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+            // document closed
+            pdfDocument!!.close()
 
-        }
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
