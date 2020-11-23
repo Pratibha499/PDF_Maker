@@ -168,8 +168,24 @@ class CreatePdf : AppCompatActivity() {
         } else {
             RealPathUtil.getPathFromURI_API19(this, uri!!)
         }
-
         // Path created
         return path
     }
+
+    // Random name assigned to PDF file name
+    private val randomName: String
+        private get() {
+            val AlphaNumericString = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    + "0123456789"
+                    + "abcdefghijklmnopqrstuvxyz")
+            val sb = StringBuilder(5)
+            for (i in 0..4) {
+                val index = (AlphaNumericString.length
+                        * Math.random()).toInt()
+                sb.append(AlphaNumericString[index])
+            }
+            return sb.toString()
+        }
+
+
 }
