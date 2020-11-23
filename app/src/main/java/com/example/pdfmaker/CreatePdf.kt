@@ -137,6 +137,21 @@ class CreatePdf : AppCompatActivity() {
             file = data.data
             // Repeat the same process for one image
             /** data (image) --> Bitmap --> Page --> PDF Document **/
+            val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
+            val pdfDocument = PdfDocument()
+            val mPageInfo = PdfDocument.PageInfo.Builder(5184, 3880, 1).create()
+            val mPage = pdfDocument.startPage(mPageInfo)
+            mPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
+            pdfDocument.finishPage(mPage)
+            val pdfFile = "/storage/emulated/0/PDF Maker Files/$randomName.pdf"
+            Log.d("onActivityResult: ", pdfFile)
+            val mpdfFile = File(pdfFile)
+            try {
+                pdfDocument.writeTo(FileOutputStream(mpdfFile))
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+            pdfDocument.close()
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
