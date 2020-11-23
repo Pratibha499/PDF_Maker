@@ -133,8 +133,10 @@ class CreatePdf : AppCompatActivity() {
         }
 
         // if single image is picked
-        else if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) {
+        else if (requestCode == IMAGE_PICK_CODE && resultCode == RESULT_OK) {
             file = data.data
+            // Repeat the same process for one image
+            /** data (image) --> Bitmap --> Page --> PDF Document **/
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
