@@ -118,9 +118,11 @@ class CreatePdf : AppCompatActivity() {
                 startPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
                 // finish Page
                 pdfDocument!!.finishPage(startPage)
-
-
             }
+            // location of PDF document and a random name to it
+            val pdfFile = "/storage/emulated/0/MY_PDF_CONVERTER/$randomName.pdf"
+
+        }
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
