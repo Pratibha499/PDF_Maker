@@ -103,9 +103,10 @@ class CreatePdf : AppCompatActivity() {
         if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK && clipData != null) {
             // creates a document
             pdfDocument = PdfDocument()
-            // till data counter ends
+            // loop till data (image) counter ends
             for (i in 0 until clipData.itemCount) {
-
+                // uri of each data (image)
+                file = clipData.getItemAt(i).uri
             }
         }
 
