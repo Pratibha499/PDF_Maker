@@ -120,5 +120,11 @@ class MainActivity : AppCompatActivity() {
         //kotlin code to go to next activity
         startActivity(Intent(this, CreatePdf::class.java))
     }
+    fun openFolder(view: View){
+        val intent = Intent(Intent.ACTION_VIEW)
+        val mydir = Uri.parse(Environment.getExternalStorageState())
+        intent.setDataAndType(mydir, "*/*")
+        startActivity(intent)
+    }
 
 }
