@@ -64,7 +64,8 @@
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
             tools:ignore="RtlSymmetry"
-            android:drawableStart="@drawable/ic_allpdf"/>
+            android:drawableStart="@drawable/ic_allpdf"
+            android:onClick="openFolder"/>
 
         <Button
             android:layout_width="180dp"
