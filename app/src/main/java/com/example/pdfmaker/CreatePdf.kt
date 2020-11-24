@@ -140,7 +140,7 @@ class CreatePdf : AppCompatActivity() {
                 // converted to bitmap (an image file format)
                 val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
                 // create a page description
-                val pageInfo = PdfDocument.PageInfo.Builder(1, 2160, i + 1).create()
+                val pageInfo = PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, i + 1).create()
                 // start a Page
                 val startPage = pdfDocument!!.startPage(pageInfo)
                 // draw something on the page
@@ -168,7 +168,7 @@ class CreatePdf : AppCompatActivity() {
             /** data (image) --> Bitmap --> Page --> PDF Document **/
             val bitmap = BitmapFactory.decodeFile(uriToFilename(file))
             val pdfDocument = PdfDocument()
-            val pageInfo = PdfDocument.PageInfo.Builder(5184, 3880, 1).create()
+            val pageInfo = PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, 1).create()
             val startPage = pdfDocument.startPage(pageInfo)
             startPage.canvas.drawBitmap(bitmap, 0f, 0f, null)
             pdfDocument.finishPage(startPage)
