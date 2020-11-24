@@ -2,8 +2,8 @@ package com.example.pdfmaker
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.view.MenuItem
@@ -18,7 +18,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -115,12 +114,12 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
     }
 
-
     fun gotoCreatePdfActivity(view: View) {
         //kotlin code to go to next activity
         startActivity(Intent(this, CreatePdf::class.java))
     }
-    fun openFolder(view: View){
+
+    fun openFolder(view: View) {
         val intent = Intent(Intent.ACTION_VIEW)
         val mydir = Uri.parse(Environment.getExternalStorageState())
         intent.setDataAndType(mydir, "*/*")

@@ -6,7 +6,6 @@
     <!-- close drawer string-->
     <string name="close_nav_drawer" translatable="false">Close Navigation Drawer</string>
     <string name="all_pdf">ALL PDF</string>
-    <string name="about">About</string>
     <string name="pdf_maker" translatable="false">PDF MAKER</string>
     <string name="create_pdf">CREATE PDF</string>
     <string name="merge_pdf">MERGE PDF</string>

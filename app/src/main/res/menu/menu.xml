@@ -4,7 +4,7 @@
     <item
         android:id="@+id/aboutItemID"
         android:icon="@drawable/ic_about"
-        android:title="@string/about"
+        android:title="@string/aboutApp"
         android:visible="false"/>
 
 </menu>

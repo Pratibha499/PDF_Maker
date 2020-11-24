@@ -5,5 +5,5 @@
     <string name="switch_language">भाषा स्विच करें</string>
     <string name="merge_pdf">पीडीएफ विलय</string>
     <string name="Language">भाषा स्विच</string>
-    <string name="about">ऐप के बारे में</string>
+    <string name="aboutApp">" PDF MAKER एक एंड्रॉयड अनुप्रयोग है जो छवियों को PDF फ़ाइल दस्तावेज़ प्रारूप में परिवर्तित करता है।"</string>
 </resources>
