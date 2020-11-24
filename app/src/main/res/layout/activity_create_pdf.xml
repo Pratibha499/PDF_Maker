@@ -11,25 +11,27 @@
         android:id="@+id/cameraButton"
         android:layout_width="104dp"
         android:layout_height="104dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="200dp"
         android:background="@drawable/round_gallery_button"
+        app:layout_constraintBottom_toTopOf="@+id/galleryButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@android:drawable/ic_menu_camera" />
-
 
     <ImageButton
         android:id="@+id/galleryButton"
         android:layout_width="100dp"
         android:layout_height="104dp"
+        android:layout_marginBottom="244dp"
         android:background="@drawable/round_gallery_button"
         android:onClick="convertToPdf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
