@@ -28,10 +28,7 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
-        <FrameLayout
-            android:id="@+id/frame"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
