@@ -13,6 +13,7 @@
     android:textSize="25sp"
     android:gravity="center"
     android:layout_marginTop="60dp"
-    android:layout_marginLeft="10dp"/>
+    android:layout_marginLeft="10dp"
+    android:layout_marginStart="10dp" />
 
 </LinearLayout>
