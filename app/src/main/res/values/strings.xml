@@ -14,4 +14,5 @@
     <string name="Language">Language Changed</string>
     <string name="switch_language">Language</string>
     <string name="aboutApp">PDF MAKER is an Android Application that converts images into PDF File Document format.</string>
+    <string name="about">About</string>
 </resources>

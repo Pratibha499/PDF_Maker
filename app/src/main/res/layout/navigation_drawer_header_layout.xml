@@ -15,14 +15,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/aboutApp"
+        android:text="@string/about"
         android:layout_marginLeft="50dp"
         android:layout_marginStart="50dp"
         android:textSize="25sp"
         android:textColor="@color/white"/>
 
     <TextView
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="@string/aboutApp"
