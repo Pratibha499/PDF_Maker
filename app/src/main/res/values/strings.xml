@@ -10,9 +10,7 @@
     <string name="create_pdf">CREATE PDF</string>
     <string name="merge_pdf">MERGE PDF</string>
 
-    <!--
-         menu string
-    -->
+
     <string name="Language">Language Changed</string>
     <string name="switch_language">Language</string>
     <string name="aboutApp">PDF MAKER is an Android Application that converts images into PDF File Document format.</string>
