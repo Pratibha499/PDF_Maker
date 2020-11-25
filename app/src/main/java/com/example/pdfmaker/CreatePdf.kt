@@ -149,7 +149,7 @@ class CreatePdf : AppCompatActivity() {
                 pdfDocument!!.finishPage(startPage)
             }
             // location of PDF document and a random name to it
-            val pdfFileDir = "/storage/emulated/0/MY_PDF_CONVERTER/$randomName.pdf"
+            val pdfFileDir = "/storage/emulated/0/PDF MAKER Files/$randomName.pdf"
             Log.d("onActivityResult: ", pdfFileDir)
             val pdfFiles = File(pdfFileDir)
             try {
